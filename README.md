@@ -26,3 +26,30 @@ Manually create a library project, l1, similarly.  This time the source code inc
 Do the same with l2, a second library.
 
 Now we are ready to try whether lerna works.
+
+```sh
+lerna add l1 l2 --scope=c1
+```
+
+This
+
+* "bootstraps one package", namely c1 -- we need to know more, what bootstrapping is
+* adds dependencies into c1's package.json
+* adds `node_modules` into c1, with symlinks to l1 and l2 therein
+
+Because of the symlinks, the npm-ignored parts can actually be found in the `node_modules` folder.  But because they're symlinks, they don't take up space.
+
+We should now be able to use l1 and l2 in c1.  Require them, and do some stuff with them, in c1:
+
+```js
+'use strict';
+
+const add1 = require('l1');
+const sub1 = require('l2');
+
+console.log("client 1");
+
+console.log("add1(sub1(3)) = %d", add1(sub1(3)));
+```
+
+All works as expected.
