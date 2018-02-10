@@ -1,3 +1,7 @@
 const sub1 = require('./index');
 
-console.log("sub1(2) =", sub1(2));
+describe('test', () => {
+  it('works', () => {
+    expect(sub1(2)).toEqual(1);
+  });
+});

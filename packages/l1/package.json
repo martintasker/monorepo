@@ -4,8 +4,11 @@
   "description": "Library 1",
   "main": "index.js",
   "scripts": {
-    "test": "node index.test.js"
+    "test": "jest --watch"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^22.2.2"
+  }
 }

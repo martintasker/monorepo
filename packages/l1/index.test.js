@@ -1,3 +1,7 @@
 const add1 = require('./index');
 
-console.log("add1(2) =", add1(2));
+describe('test', () => {
+  it('works', () => {
+    expect(add1(1)).toEqual(2);
+  });
+});

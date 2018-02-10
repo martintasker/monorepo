@@ -53,3 +53,13 @@ console.log("add1(sub1(3)) = %d", add1(sub1(3)));
 ```
 
 All works as expected.
+
+We now want to add jest as a dependency of all packages.  Use `lerna add jest` for that.
+
+```sh
+lerna add jest
+```
+
+This adds jest to all packages.  It takes time, since jest is big, and there is no attempt to optimize by sharing between each package.  This kind of invocation of `lerna add` would be unusual in practice.
+
+One nice result of this though is that we can have proper test code in the library projects, and even in the client project.
