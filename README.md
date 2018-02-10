@@ -22,4 +22,6 @@ Manually create a library project, l1, similarly.  This time the source code inc
 * `index.js` which exports a function
 * `index.test.js` which locally tests things
 
+Do the same with l2, a second library.
+
 Now we are ready to try whether lerna works.
