@@ -21,6 +21,7 @@ Manually create a library project, l1, similarly.  This time the source code inc
 
 * `index.js` which exports a function
 * `index.test.js` which locally tests things
+* `.npmignore` with `*.test.js` in
 
 Do the same with l2, a second library.
 
