@@ -1,6 +1,6 @@
 'use strict';
 
-const add1 = require('l1');
+const {add1, mul2} = require('l1');
 const sub1 = require('l2');
 
 console.log("client 1");

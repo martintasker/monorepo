@@ -82,3 +82,5 @@ lerna publish --skip-git --skip-npm
 ```
 
 which then interactively asks you, for each changed package, how you want to do the version bump.
+
+Doing this a second time, with major changes to l1 and c1, but none to l2, still asked me whether I wanted to update l2.
