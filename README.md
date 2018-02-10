@@ -63,3 +63,13 @@ lerna add jest
 This adds jest to all packages.  It takes time, since jest is big, and there is no attempt to optimize by sharing between each package.  This kind of invocation of `lerna add` would be unusual in practice.
 
 One nice result of this though is that we can have proper test code in the library projects, and even in the client project.
+
+The equivalent of `npm install` in lerna-land is `lerna bootstrap`, which does an `npm install` for all external dependencies, and a symlink for all internal dependencies.  So,
+
+```sh
+git clean -fdx
+lerna bootstrap
+```
+
+gets you back to where you started.
+
