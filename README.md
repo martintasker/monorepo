@@ -73,3 +73,12 @@ lerna bootstrap
 
 gets you back to where you started.
 
+## Publishing
+
+You can bump all needed package versions with
+
+```sh
+lerna publish --skip-git --skip-npm
+```
+
+which then interactively asks you, for each changed package, how you want to do the version bump.
